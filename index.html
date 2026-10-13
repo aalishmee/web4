@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>Forms and Validation</h1>
+    </header>
+    <main class="container">
+        <section class="form-section">
+            <form>
+                <label for="name0" class="form-label">Name:</label>
+                <input type="text" id="name0" name="name0" class="form-control mb-3">
+                <label for="email0" class="form-label">Email:</label>
+                <input type="email" id="email0" name="email0" class="form-control mb-3">
+                <label for="message0" class="form-label">Message:</label>
+                <textarea id="message0" name="message0" class="form-control" rows="4"></textarea>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="form-section">
+            <form>
+                <label for="name1" class="form-label">Name:</label>
+                <input type="text" id="name1" name="name1" class="form-control mb-3" maxlength="30" required>
+                <label for="email1" class="form-label">Email:</label>
+                <input type="email" id="email1" name="email1" class="form-control mb-3" required>
+                <label for="message1" class="form-label">Message:</label>
+                <textarea id="message1" name="message1" class="form-control" rows="4" maxlength="200" required></textarea>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="form-section task-card">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName2" class="form-label">First Name</label>
+                    <input type="text" id="firstName2" name="firstName2" class="form-control" placeholder="Jane">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName2" class="form-label">Last Name</label>
+                    <input type="text" id="lastName2" name="lastName2" class="form-control" placeholder="Doe">
+                </div>
+            </div>
+            <label for="email2" class="form-label">Email</label>
+            <input type="email" id="email2" name="email2" class="form-control" placeholder="you@example.com">
+            <div class="form-text mb-3">We'll never share your email.</div>
+            <label for="message2" class="form-label">Message</label>
+            <textarea id="message2" name="message2" class="form-control" rows="4" placeholder="Write your message..."></textarea>
+            <div class="form-check mt-3">
+                <input type="checkbox" id="terms2" name="terms2" class="form-check-input">
+                <label for="terms2" class="form-check-label">I agree to the terms</label>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit">Send Message</button>
+        </section>
+        <section class="form-section task-card">
+            <form id="checkForm" novalidate>
+                <label for="name3" class="form-label">Name</label>
+                <input type="text" id="name3" name="name3" class="form-control" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+                <div class="valid-feedback">Looks good!</div>
+                <label for="email3" class="form-label mt-3">Email</label>
+                <input type="email" id="email3" name="email3" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+                <div class="valid-feedback">Looks good!</div>
+                <button class="btn btn-primary mt-3" type="submit">Check Form</button>
+                <p id="checkMessage" class="mt-3"></p>
+            </form>
+        </section>
+        <section class="form-section task-card">
+            <form id="registerForm" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your first name.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your last name.</div>
+                    </div>
+                </div>
+                <label for="registerEmail" class="form-label">Email</label>
+                <input type="email" id="registerEmail" name="registerEmail" class="form-control" placeholder="student@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+                <div class="row mt-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" minlength="8" required>
+                        <div class="form-text">Minimum 8 characters.</div>
+                        <div class="invalid-feedback">Enter at least 8 characters.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                        <div class="invalid-feedback">Passwords must match.</div>
+                    </div>
+                </div>
+                <label class="form-label mt-2">Gender</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="male" name="gender" value="male" class="form-check-input" required>
+                        <label for="male" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="female" name="gender" value="female" class="form-check-input" required>
+                        <label for="female" class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="other" name="gender" value="other" class="form-check-input" required>
+                        <label for="other" class="form-check-label">Other</label>
+                    </div>
+                    <div id="genderError" class="text-danger small mt-1" style="display:none;">Please select a gender.</div>
+                </div>
+                <label class="form-label">Hobbies</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="reading" name="hobbies" value="reading" class="form-check-input">
+                        <label for="reading" class="form-check-label">Reading</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="sports" name="hobbies" value="sports" class="form-check-input">
+                        <label for="sports" class="form-check-label">Sports</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="music" name="hobbies" value="music" class="form-check-input">
+                        <label for="music" class="form-check-label">Music</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="coding" name="hobbies" value="coding" class="form-check-input">
+                        <label for="coding" class="form-check-label">Coding</label>
+                    </div>
+                </div>
+                <label for="country" class="form-label">Country</label>
+                <select id="country" name="country" class="form-select" required>
+                    <option value="">Choose your country...</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Germany">Germany</option>
+                    <option value="USA">USA</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">Please choose a country.</div>
+                <div class="d-flex gap-3 mt-4">
+                    <button type="submit" class="btn btn-primary flex-fill">Register</button>
+                    <button type="reset" class="btn btn-outline-secondary flex-fill">Reset</button>
+                </div>
+                <p id="successMessage" class="mt-3"></p>
+            </form>
+        </section>
+    </main>
+    <footer class="text-center py-3 mt-4">
+        <p>Forms and Validation Assignment</p>
+    </footer>
+    <script>
+        const checkForm = document.getElementById("checkForm");
+        const checkMessage = document.getElementById("checkMessage");
+        checkForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            checkForm.classList.add("was-validated");
+            if (checkForm.checkValidity()) {
+                checkMessage.textContent = "Form is valid!";
+                checkMessage.className = "text-success mt-3";
+            } else {
+                checkMessage.textContent = "";
+            }
+        });
+        const registerForm = document.getElementById("registerForm");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const successMessage = document.getElementById("successMessage");
+        const genderError = document.getElementById("genderError");
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+            } else {
+                confirmPassword.setCustomValidity("");
+            }
+            const genderPicked = document.querySelector('input[name="gender"]:checked');
+            genderError.style.display = genderPicked ? "none" : "block";
+            registerForm.classList.add("was-validated");
+            if (registerForm.checkValidity() && genderPicked) {
+                successMessage.textContent = "Registration form submitted successfully!";
+                successMessage.className = "text-success mt-3";
+            } else {
+                successMessage.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
