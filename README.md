@@ -1,17 +1,17 @@
 # Forms and Validation Assignment
 
-**Name:** Alish Medina
+**Name:** Alish Medina  
 **Group:** SE-2538
 
 ---
 
 ## Overview
-This project demonstrates HTML form building and validation using **Bootstrap 5.3**. It contains five tasks, each focusing on a different aspect of form design and validation — from basic inputs to advanced JavaScript-based validation.
+This project demonstrates HTML form building and validation using **Bootstrap 5.3**. It contains five tasks, each focusing on a different aspect of form design and validation - from basic inputs to advanced JavaScript-based validation.
 
 ---
 
 ## Task 0: Simple Contact Form
-A basic contact form with Name, Email, Message, and Submit button. All fields have proper `<label>` elements. No validation — this is the plain baseline.
+A basic contact form with Name, Email, Message, and Submit button. All fields have proper `<label>` elements. No validation - this is the plain baseline.
 
 <img width="1323" height="671" alt="Снимок экрана 2026-10-13 173225" src="https://github.com/user-attachments/assets/0e4130d8-c9a2-4c65-977e-887a734a58b2" />
 
@@ -73,10 +73,10 @@ A complete registration form combining everything:
 ---
 
 ## Summary
-I built five forms, each demonstrating a different part of HTML form building — from basic inputs to Bootstrap validation. The most interesting parts were:
-1. **Understanding the difference between HTML5 validation and Bootstrap validation** — HTML5 shows browser popups, while Bootstrap shows inline red/green borders and messages.
-2. **Password matching with `setCustomValidity`** — since HTML5 has no built-in "passwords must match" rule, this had to be done in JavaScript.
-3. **Radio button group validation** — Bootstrap's feedback system works on single inputs, so I checked the radio group manually with `document.querySelector('input[name="gender"]:checked')`.
+I built five forms, each demonstrating a different part of HTML form building - from basic inputs to Bootstrap validation. The most interesting parts were:
+1. **Understanding the difference between HTML5 validation and Bootstrap validation** - HTML5 shows browser popups, while Bootstrap shows inline red/green borders and messages.
+2. **Password matching with `setCustomValidity`** - since HTML5 has no built-in "passwords must match" rule, this had to be done in JavaScript.
+3. **Radio button group validation** - Bootstrap's feedback system works on single inputs, so I checked the radio group manually with `document.querySelector('input[name="gender"]:checked')`.
 
 All forms are responsive, styled consistently, and validate correctly.
 
@@ -85,11 +85,11 @@ All forms are responsive, styled consistently, and validate correctly.
 ## How to Run
 1. Clone the repository
 2. Open `index.html` in any modern browser
-3. No installation or build step needed — Bootstrap loads from CDN
+3. No installation or build step needed - Bootstrap loads from CDN
 
 ---
 
 ## Files
-- `index.html` — all five forms
-- `style.css` — custom styling
-- `screenshots/` — screenshots for each task
+- `index.html` - all five forms
+- `style.css` - custom styling
+- `screenshots/` - screenshots for each task
